@@ -49,11 +49,11 @@ function workingPaperCard(p) {
   return `<article class="pub"><div class="pub-title-row"><h3>${esc(p.title)}</h3>${paperLinks(p)}</div><p class="authors">${esc(p.authors)}</p><p class="venue">${esc(p.status)}</p>${abstractBlock(p.abstract)}</article>`;
 }
 function progressCard(p) {
-  return `<article class="pub progress"><h3>${esc(p.title)}</h3><p class="authors">${esc(p.authors)}</p><p class="venue">${esc(p.status)}</p><p>${esc(p.summary)}</p></article>`;
+  return `<article class="pub progress"><h3>${esc(p.title)}</h3><p class="authors">${esc(p.authors)}</p><p class="venue">${esc(p.status)}</p><p class="progress-summary">${esc(p.summary)}</p></article>`;
 }
 
 function renderHome() {
-  shell(`<section class="hero">${heroRipples()}<p class="eyebrow">Behavioral Operations · Human–AI Collaboration · Operational Transparency</p><h2>Welcome</h2><p>${esc(D.profile.bio)}</p><p>${esc(D.profile.bio2)}</p></section>
+  shell(`<section class="hero">${heroRipples()}<p class="eyebrow">Behavioral Operations · Human–AI Collaboration · Operational Transparency</p><h2>Welcome</h2><p>${esc(D.profile.bio)}</p><p>${esc(D.profile.bio2)}</p><p>${esc(D.profile.bioTeaching)}</p><p class="personal-note">${esc(D.profile.bioPersonal)}</p></section>
   <section><h2>Selected research</h2>${D.publications.slice(0,3).map(p=>pubCard(p,false)).join('')}<p><a class="more" href="research.html">See all research →</a></p></section>
   <section><h2>Recent news</h2><div class="timeline">${D.news.slice(0,6).map(([d,t])=>`<div><time>${esc(d)}</time><p>${esc(t)}</p></div>`).join('')}</div><p><a class="more" href="news.html">More news →</a></p></section>`);
 }
@@ -65,14 +65,13 @@ function renderResearch() {
  <section><h2>Other publications</h2><ul class="clean-list">${D.otherPublications.map(p=>`<li><span class="year">${esc(p.year)}</span><div><strong>${p.href?`<a href="${p.href}">${esc(p.title)}</a>`:esc(p.title)}</strong><br>${p.authors?esc(p.authors)+' · ':''}<em>${esc(p.venue)}</em></div></li>`).join('')}</ul></section>`);
 }
 function renderTeaching(){
- shell(`<section><h2>Teaching</h2><p class="lede">I design courses that help students understand both how AI methods work and how to use them thoughtfully in operational decision-making.</p></section>
- ${D.teaching.map(g=>`<section class="teaching-group"><h2 class="institution-heading">${esc(g.institution)}</h2>${g.courses.map(c=>`<article class="course"><h3>${esc(c.name)}</h3><p>${esc(c.detail)}</p></article>`).join('')}</section>`).join('')}
- <section class="callout"><p class="eyebrow">Teaching innovation</p><h2>${esc(D.teachingInnovation.title)}</h2><p><strong>${esc(D.teachingInnovation.venue)}</strong></p><p>${esc(D.teachingInnovation.text)}</p></section>
- <section><h2>Selected student feedback</h2><blockquote>“This was the best class I have taken at this university by far!”</blockquote><blockquote>“Would love a second course to learn more!”</blockquote><p class="muted">Undergraduate AI in Supply Chain course evaluation: course 5.0/5.0; instructor 5.0/5.0. Graduate course evaluation: course 4.90/5.0; instructor 5.0/5.0.</p></section>`);
+ shell(`<section><h2>Teaching</h2><p class="lede">I design courses around a simple question: if AI can help students with the mechanics, what work do students still need to own?</p></section>
+ ${D.teaching.map(g=>`<section class="teaching-group"><h2 class="institution-heading">${esc(g.institution)}</h2>${g.courses.map(c=>`<article class="course ${c.highlights?'featured-course':''}"><h3>${esc(c.name)}</h3><div class="course-body"><p>${esc(c.detail)}</p>${c.detail2?`<p>${esc(c.detail2)}</p>`:''}${c.highlights?`<ul class="course-highlights">${c.highlights.map(h=>`<li>${esc(h)}</li>`).join('')}</ul>`:''}</div></article>`).join('')}</section>`).join('')}
+ <section><h2>Selected student feedback <span class="heading-note">AI in Supply Chain Management</span></h2><blockquote>“This was the best class I have taken at this university by far!”</blockquote><blockquote>“Would love a second course to learn more!”</blockquote><p class="muted">AI in Supply Chain Management course evaluations: undergraduate course 5.0/5.0 and instructor 5.0/5.0; graduate course 4.90/5.0 and instructor 5.0/5.0.</p></section>`);
 }
 function simpleList(items){ return `<ul class="clean-list">${items.map(([y,t])=>`<li><span class="year">${esc(y)}</span><div>${esc(t)}</div></li>`).join('')}</ul>`; }
 function renderService(){
- shell(`<section><h2>Awards & service</h2></section><section><h2>Awards</h2>${simpleList(D.awards)}</section><section><h2>Service</h2>${simpleList(D.service)}</section><section><h2>Invited talks</h2>${simpleList(D.invitedTalks)}</section><section><h2>Recent conference presentations</h2><div class="timeline">${D.recentPresentations.map(([d,t,v])=>`<div><time>${esc(d)}</time><p><strong>${esc(t)}</strong><br><span class="muted">${esc(v)}</span></p></div>`).join('')}</div></section>`);
+ shell(`<section><h2>Awards & service</h2></section><section><h2>Awards</h2>${simpleList(D.awards)}</section><section><h2>Service</h2>${simpleList(D.service)}</section>`);
 }
 function renderNews(){ shell(`<section><h2>News</h2><div class="timeline full">${D.news.map(([d,t])=>`<div><time>${esc(d)}</time><p>${esc(t)}</p></div>`).join('')}</div></section>`); }
 function renderCV(){ shell(`<section><h2>Curriculum Vitae</h2><p><a class="button" href="assets/Maya_Balakrishnan_CV.pdf" download>Download CV (PDF)</a></p><object class="cv-frame" data="assets/Maya_Balakrishnan_CV.pdf" type="application/pdf"><p>Your browser cannot display the PDF inline. <a href="assets/Maya_Balakrishnan_CV.pdf">Download it here.</a></p></object></section>`); }

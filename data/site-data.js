@@ -7,9 +7,11 @@ window.SITE_DATA = {
     location: "Richardson, Texas",
     bio: `I am an Assistant Professor of Operations Management at the Naveen Jindal School of Management at The University of Texas at Dallas. My research examines how people and organizations interact with artificial intelligence and other operational systems, with a particular focus on human–AI collaboration, behavioral operations, and operational transparency.`,
     bio2: `My work combines controlled experiments, field and archival data, econometrics, machine learning, and computational methods. I received my PhD in Technology and Operations Management from Harvard Business School and my BS in Computer Science, with a specialization in Human-Computer Interaction, from Stanford University. Before graduate school, I worked at Microsoft and Goldman Sachs and co-founded a venture-backed software company for food manufacturers.`,
+    bioTeaching: `I also care deeply about teaching. At UT Dallas, I designed from scratch and teach AI in Supply Chain Management, a course that uses generative AI to help students with no coding background move quickly from messy operational data to machine-learning models, optimization, and concrete business decisions—while still learning to evaluate AI outputs, understand the data and algorithms underneath them, and own the final recommendation.`,
+    bioPersonal: `Outside of work, I enjoy collecting hobbies—recently pottery, salsa dancing, and piano—and spending time with my husband and son.`,
     links: [
       {label: "CV", href: "assets/Maya_Balakrishnan_CV.pdf"},
-      {label: "UT Dallas", href: "https://jindal.utdallas.edu/"},
+      {label: "UT Dallas", href: "https://jindal.utdallas.edu/faculty/maya-balakrishnan?_ga=2.202056593.1689893000.1789410710-1668145572.1723650263"},
       {label: "ORCID", href: "https://orcid.org/0000-0002-7823-1808"}
     ]
   },
@@ -24,7 +26,7 @@ window.SITE_DATA = {
       year: "2025",
       note: "Special Issue on the Human-Algorithm Connection",
       href: "https://doi.org/10.1287/mnsc.2022.03850",
-      abstract: `Even when algorithms outperform humans on average, people may possess private information that can improve an algorithm's prediction. We study how people decide whether and how much to override algorithmic forecasts when the value of their private information varies across decisions. Across three experiments, we find that people rely on a naïve advice-weighting rule: they combine their own judgment with the algorithm using a relatively constant weight, which produces over-adherence when private information is valuable and under-adherence when it is not. This behavior increases prediction error substantially. Feature transparency helps users better identify when and how to deviate from an algorithm, and a targeted intervention that encourages people to use private information only to determine deviations further improves performance. The results show how process design can help humans contribute information an algorithm does not observe without introducing unnecessary judgmental error.`,
+      abstract: `Even if algorithms make better predictions than humans on average, humans may sometimes have private information that an algorithm does not have access to that can improve performance. How can we help humans effectively use and adjust recommendations made by algorithms in such situations? When deciding whether and how to override an algorithm’s recommendations, we hypothesize that people are biased toward following naïve advice-weighting (NAW) behavior; they take a weighted average between their own prediction and the algorithm’s prediction, with a constant weight across prediction instances regardless of whether they have valuable private information. This leads to humans overadhering to the algorithm’s predictions when their private information is valuable and underadhering when it is not. In an online experiment where participants were tasked with making demand predictions for 20 products while having access to an algorithm’s predictions, we confirm this bias toward NAW and find that it leads to a 20%–61% increase in prediction error. In a second experiment, we find that feature transparency—even when the underlying algorithm is a black box—helps users more effectively discriminate how to deviate from algorithms, resulting in a 25% reduction in prediction error. We make further improvements in a third experiment via an intervention designed to move users away from advice weighting and instead, use only their private information to inform deviations, leading to a 34% reduction in prediction error.`,
       awards: [
         "1st place, 2023 POMS College of Behavioral Operations Management Junior Scholar Paper Competition",
         "2nd place, 2023 INFORMS Behavioral Operations Management Best Working Paper Competition",
@@ -66,7 +68,7 @@ window.SITE_DATA = {
       authors: "Maya Balakrishnan and Jimin Nam",
       status: "Under review at Production and Operations Management",
       href: "https://drive.google.com/file/d/1f_xQFjYYzxPMxBmLlPwNbN0_w12-k1X8/view?usp=share_link",
-      abstract: `Generative AI models differ not only in capability but also in how they are positioned to balance user goals against safety guardrails. Across two preregistered, incentive-compatible experiments (N = 1,344), we show that users treat this operating stance as a task-relevant product attribute. A cautious task increased choice of a safety-oriented assistant from roughly 55% to 78%. When users were assigned an assistant, task–stance fit improved perceived understanding and reuse intentions, while the assistant’s stance sharply altered which uncomfortable accountability facts appeared in customer communications. The value of an AI’s stance therefore depends on the task it supports.`
+      abstract: `Generative AI tools have become routine at work, but the major models differ in how their developers position them to behave when user goals and model guardrails come into tension. Some models are framed as cautious, designed to decline requests that risk harm. Others are framed as open, prioritizing direct answers and minimal filtering. We examine whether workers respond to operating stance when choosing an AI and when using one they have been assigned. Across two preregistered, incentive-compatible online experiments (N = 1,344), workers treated operating stance as a task-relevant product attribute. When a workplace writing task emphasized caution and risk calibration, workers were substantially more likely to select a safety-stance assistant (Study 1). When assigned an assistant rather than allowed to choose, workers whose assistant’s stance matched the task reported a more positive interaction experience and were more willing to use the same assistant again. The match also shaped the firm’s customer-facing output: stance materially affected which internal accountability facts appeared in the email participants ultimately sent to customers (Study 2). The value of a model’s operating stance depends on the task it supports, both in which model workers select and in what the chosen model produces. These findings link operations decisions about AI deployment to marketing decisions about customer-facing brand voice.`
     }
   ],
 
@@ -99,7 +101,18 @@ window.SITE_DATA = {
 
   teaching: [
     {institution:"University of Texas at Dallas", courses:[
-      {name:"AI in Supply Chain Management", detail:"Undergraduate and master's courses designed and launched at UT Dallas. The courses cover forecasting, machine learning, optimization, sequential decision-making, generative AI, and human–AI collaboration through operational applications."},
+      {
+        name:"AI in Supply Chain Management",
+        detail:"I designed this course from scratch and teach both undergraduate and master’s versions at UT Dallas. The undergraduate course was built for business students with no coding, math, or data-science prerequisites; the students in the first offering had never written a line of code before the course.",
+        detail2:"Generative AI lets us move past syntax and spend class time on the harder parts of AI-enabled decision making. By the end of the semester, students work from messy raw sales data through data cleaning and imputation, forecasting and machine-learning models, model interpretation and evaluation, and mixed-integer optimization—ultimately turning predictions into concrete operational recommendations.",
+        highlights:[
+          "Students learn to own four parts of an AI-enabled decision: evaluating AI outputs, examining the inputs and data-generating process, building intuition for how algorithms work, and owning the final operational decision.",
+          "In class, we use whiteboards to build intuition for methods such as Thompson sampling, dynamic programming, shortest paths, neural networks, forecasting, and fairness metrics; students then use generative AI as a coding partner to implement those ideas.",
+          "I built an original inventory-ordering simulation in which students create their own forecasting algorithms, receive information their AI cannot see, and learn when human judgment improves or harms the recommendation.",
+          "The final project asks students to interrogate custom-GPT stakeholders in a fictional logistics setting, clean and model messy data, extract business constraints, formulate an optimization model, and defend a final inventory manifest to the client.",
+          "The course design was featured in my M&SOM 2026 Teaching Innovations presentation, ‘Raising the Ceiling on What Students Can Learn with AI.’"
+        ]
+      },
       {name:"Managerial Methods in Decision Making under Uncertainty", detail:"Undergraduate introduction to probability and business statistics."}
     ]},
     {institution:"Harvard Business School", courses:[
@@ -110,12 +123,6 @@ window.SITE_DATA = {
       {name:"Introduction to Computer Science", detail:"Teaching Assistant."}
     ]}
   ],
-
-  teachingInnovation: {
-    title:"Raising the Ceiling on What Students Can Learn with AI",
-    venue:"M&SOM Conference Teaching Innovations Session, Boston, July 2026",
-    text:"My AI-in-supply-chain courses treat generative AI as a learning partner while raising expectations for what students can understand and build. Students use AI to accelerate implementation, then demonstrate conceptual understanding through offline assessment, model critique, and operational decision-making."
-  },
 
   awards: [
     ["2025", "Management Science Distinguished Service Award — Reviewer"],
@@ -136,37 +143,43 @@ window.SITE_DATA = {
     ["2020–2022", "Co-organizer, HBS Digital Doctoral Workshop Seminar Series"]
   ],
 
-  invitedTalks: [
-    ["2026", "University of Pennsylvania — Wharton Empirical OM PhD Seminar"],
-    ["2026", "University of Texas at Dallas — JSOM Operations Department"],
-    ["2025", "University of Toronto — Rotman Operations Department, Young Scholar Seminar Series"],
-    ["2024", "University of Michigan Ross — Technology and Operations Department"],
-    ["2024", "Emory University Goizueta — Information Systems and Operations Management"],
-    ["2024", "Microsoft Research — Fairness, Accountability, Transparency & Ethics in AI (FATE) Group"]
-  ],
-
-  recentPresentations: [
-    ["Jul 2026", "The Human in the Data Pipeline: Behavioral Biases in Training Data Set Curation for AI", "INFORMS M&SOM Conference, Boston"],
-    ["Jul 2026", "Raising the Ceiling on What Students Can Learn with AI", "INFORMS M&SOM Conference — Teaching Innovations Session, Boston"],
-    ["May 2026", "Teaching ‘I Know It When I See It’ to AI: Human–AI Collaboration for Transferring Tacit Decision Rules", "POMS Annual Conference, Reno"],
-    ["May 2026", "The Human in the Data Pipeline: Behavioral Biases in Training Data Set Curation for AI", "Behavioral Operations Conference, Tempe"],
-    ["Jan 2026", "Warnings and Endorsements: Improving Human–AI Collaboration in the Presence of Outliers", "Workshop in Management Science, Santa Cruz, Chile"]
-  ],
-
   news: [
     ["2026-09", "Serving as Track Chair for the POMS Teaching/Pedagogy in POM track for the 2027 conference."],
-    ["2026-07", "Presented two talks at the INFORMS M&SOM Conference in Boston, including a Teaching Innovations presentation on AI in the classroom."],
-    ["2026-05", "Presented research at the POMS Annual Conference in Reno and the Behavioral Operations Conference at Arizona State University."],
-    ["2026-01", "Presented Warnings and Endorsements at the Workshop in Management Science in Santa Cruz, Chile."],
+    ["2026-07", "Presented ‘The Human in the Data Pipeline: Behavioral Biases in Training Data Set Curation for AI’ at the INFORMS M&SOM Conference in Boston."],
+    ["2026-07", "Presented ‘Raising the Ceiling on What Students Can Learn with AI’ in the Teaching Innovations Session at the INFORMS M&SOM Conference in Boston."],
+    ["2026-05", "Presented ‘Teaching ‘I Know It When I See It’ to AI: Human–AI Collaboration for Transferring Tacit Decision Rules’ at the POMS Annual Conference in Reno."],
+    ["2026-05", "Presented ‘The Human in the Data Pipeline: Behavioral Biases in Training Data Set Curation for AI’ at the Behavioral Operations Conference in Tempe."],
+    ["2026-01", "Presented ‘Warnings and Endorsements: Improving Human–AI Collaboration in the Presence of Outliers’ at the Workshop in Management Science in Santa Cruz, Chile."],
     ["2025-12", "Received the 2025 Management Science Distinguished Service Award (Reviewer)."],
     ["2025", "Received the 2025 M&SOM Meritorious Service Award (Reviewer)."],
     ["2025-09", "Warnings and Endorsements published in Manufacturing & Service Operations Management."],
     ["2025-03", "Human-Algorithm Collaboration with Private Information published online in Management Science."],
     ["2025-03", "Differentiating on Diversity published in Production and Operations Management, 34(3)."],
+    ["2024-10", "Learning about Learning: Encouraging Algorithm Alignment through Progressive Deployment, with B. McLaughlin, presented at the INFORMS Annual Conference in Seattle."],
+    ["2023-12", "Presented ‘Speedy Activists: Firm Response Time to Sociopolitical Events Influences Consumer Behavior’ at the Workshop in Management Science in San Pedro, Chile."],
+    ["2023-11", "Presented ‘Improving Human-Algorithm Collaboration: Causes and Mitigation of Over- and Under-Adherence’ at the Society for Judgment and Decision Making Annual Meeting in San Francisco."],
+    ["2023-10", "Presented ‘Improving Human-Algorithm Collaboration: Causes and Mitigation of Over- and Under-Adherence’ in the Humans and Machines with Applications in Operations session at the INFORMS Annual Conference in Phoenix."],
+    ["2023-10", "Presented ‘Improving Human-Algorithm Collaboration: Causes and Mitigation of Over- and Under-Adherence’ in the INFORMS Behavioral Operations Management Best Working Paper Competition finalist session."],
+    ["2023-10", "Presented ‘Differentiating on Diversity: How Disclosing Workforce Diversity Influences Consumer Choice’ in the INFORMS Service Science DEIJ Award Session."],
     ["2023-10", "Improving Human-Algorithm Collaboration won second place in the INFORMS Behavioral Operations Management Best Working Paper Competition."],
     ["2023-10", "Differentiating on Diversity was accepted at Production and Operations Management."],
     ["2023-07", "Speedy Activists published in the Journal of Consumer Psychology."],
+    ["2023-06", "Presented ‘Differentiating on Diversity: How Disclosing Workforce Diversity Influences Consumer Choice’ at the Conference in Operational Excellence in Retailing at Wharton."],
+    ["2023-06", "Presented ‘Improving Human-Algorithm Collaboration: Causes and Mitigation of Over- and Under-Adherence’ at the M&SOM Conference in Montreal."],
+    ["2023-06", "Presented ‘Speedy Activists: Firm Response Time to Sociopolitical Events Influences Consumer Behavior’ at the Behavioral Operations Conference in Baltimore."],
+    ["2023-05", "Presented ‘Improving Human-Algorithm Collaboration: Causes and Mitigation of Over- and Under-Adherence’ at the POMS Annual Conference in Orlando."],
+    ["2023-05", "Presented ‘Differentiating on Diversity: How Disclosing Workforce Diversity Improves Brand Attitudes’ at the POMS Annual Conference in Orlando."],
     ["2023-05", "Improving Human-Algorithm Collaboration won first place in the POMS College of Behavioral Operations Management Junior Scholar Paper Competition."],
-    ["2022-06", "Won Best PhD Blitz Presentation at the Advances in Decision Analysis Conference."]
-  ]
-};
+    ["2023-03", "Differentiating on Diversity was presented at the Marketing Science Conference on Diversity, Equity, and Inclusion at SMU Cox (presenter: Jimin Nam)."],
+    ["2023-03", "Presented ‘Speedy Activists: Firm Response Time to Sociopolitical Events Influences Consumer Behavior’ at the Society for Consumer Psychology in San Juan."],
+    ["2023-03", "Differentiating on Diversity was presented at the Society for Consumer Psychology in San Juan (presenter: Jimin Nam)."],
+    ["2023-01", "Presented ‘Improving Human-Algorithm Collaboration: Causes and Mitigation of Over- and Under-Adherence’ at the Workshop in Management Science in Puerto Varas, Chile."],
+    ["2022-10", "Presented ‘Unlocking Algorithm Potential: Overcoming Naïve Advice Weighting with Feature Transparency’ at the INFORMS Annual Conference in Indianapolis."],
+    ["2022-10", "Differentiating on Diversity was presented at the INFORMS Annual Conference in Indianapolis (presenter: Jimin Nam)."],
+    ["2022-06", "Presented ‘Unlocking Algorithm Potential: Overcoming Naïve Advice Weighting with Feature Transparency’ at Advances in Decision Analysis at UVA Darden; won Best PhD Blitz Presentation."],
+    ["2022-06", "Presented ‘Differentiating on Diversity: How Disclosing Workforce Diversity Improves Brand Attitudes’ at the Behavioral Operations Conference at the University of Arkansas."],
+    ["2022-06", "Unlocking Algorithm Potential was presented at the Behavioral Operations Conference at the University of Arkansas (presenter: Jordan Tong)."],
+    ["2022-04", "Presented ‘Unlocking Algorithm Potential: Overcoming Naïve Advice Weighting with Feature Transparency’ at the POMS Annual Conference (online)."],
+    ["2021-10", "‘An Empirical Study of Time Allotment and Delays in E-Commerce Delivery’ was presented at the INFORMS Annual Conference in Anaheim (presenter: N. Epstein)."],
+    ["2021-06", "Presented ‘Speedy Activists: Firm Response Time to Sociopolitical Events Influences Consumer Behavior’ at AMA Marketing and Public Policy (online), with Jimin Nam." ]
+  ]};
