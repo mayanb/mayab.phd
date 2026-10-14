@@ -12,11 +12,11 @@ window.SITE_DATA = {
     links: [
       {label: "CV", href: "assets/Maya_Balakrishnan_CV.pdf"},
       {label: "UT Dallas", href: "https://jindal.utdallas.edu/faculty/maya-balakrishnan?_ga=2.202056593.1689893000.1789410710-1668145572.1723650263"},
-      {label: "ORCID", href: "https://orcid.org/0000-0002-7823-1808"}
+      {label: "Google Scholar", href: "https://scholar.google.com/scholar?q=author%3A%22Maya%20Balakrishnan%22"}
     ]
   },
 
-  researchOverview: `I study the behavioral side of operational systems: when human judgment improves algorithmic decisions, when it introduces systematic error, and how organizations can design processes that help people and AI work better together. A second stream of my research examines how transparency about a firm's operations shapes consumer perceptions and choice.`,
+  researchOverview: `I study how people and organizations build and use AI systems without assuming that either human judgment or an algorithm is always right. My research follows the human role across the AI pipeline: how people teach tacit expertise to AI, choose and curate the data models learn from, select among systems with different behaviors, and decide when to trust or override an algorithm’s recommendation. A complementary stream examines how transparency about an organization’s operations shapes consumer perceptions and choice.`,
 
   publications: [
     {
@@ -69,16 +69,16 @@ window.SITE_DATA = {
       status: "Under review at Production and Operations Management",
       href: "https://drive.google.com/file/d/1f_xQFjYYzxPMxBmLlPwNbN0_w12-k1X8/view?usp=share_link",
       abstract: `Generative AI tools have become routine at work, but the major models differ in how their developers position them to behave when user goals and model guardrails come into tension. Some models are framed as cautious, designed to decline requests that risk harm. Others are framed as open, prioritizing direct answers and minimal filtering. We examine whether workers respond to operating stance when choosing an AI and when using one they have been assigned. Across two preregistered, incentive-compatible online experiments (N = 1,344), workers treated operating stance as a task-relevant product attribute. When a workplace writing task emphasized caution and risk calibration, workers were substantially more likely to select a safety-stance assistant (Study 1). When assigned an assistant rather than allowed to choose, workers whose assistant’s stance matched the task reported a more positive interaction experience and were more willing to use the same assistant again. The match also shaped the firm’s customer-facing output: stance materially affected which internal accountability facts appeared in the email participants ultimately sent to customers (Study 2). The value of a model’s operating stance depends on the task it supports, both in which model workers select and in what the chosen model produces. These findings link operations decisions about AI deployment to marketing decisions about customer-facing brand voice.`
+    },
+    {
+      title: "Capturing ‘I Know It When I See It’: Transferring Tacit Decision Knowledge to AI",
+      authors: "Maya Balakrishnan and Jordan Tong",
+      status: "Working paper · Draft available upon request",
+      abstract: `People often know how to make complex decisions better than they can explain how they make them. For organizations seeking to scale human judgment through AI, this creates a knowledge-transfer problem: employees may struggle to articulate the knowledge behind their decisions, and transferring their expertise takes time and effort. Through a behavioral model and two online experiments, we develop and test an account of how applying knowledge through decisions, articulating it as instructions, and reviewing AI-inferred rules shape system performance and human effort. In the experiments, 562 participants learn a complex candidate-quality criterion and configure an AI to make selection decisions on their behalf. Study 1 provides evidence of useful tacit decision knowledge: participants make more accurate decisions than AI configured with their self-authored instructions. AI configured from their decisions overtakes instruction-configured AI in accuracy as demonstrations accumulate; 30 demonstrations suffice, at about one-third the configuration time. Study 2 shows that this knowledge can nonetheless be made explicit: AI-generated instructions based on participants’ decisions yield higher accuracy with less configuration time than self-authored instructions. Relative to locked AI-generated instructions, editability increases perceived alignment with participants’ own decisions, ownership, and expected AI accuracy without sacrificing objective accuracy. Participants delegate significantly more decisions to AI configured with editable generated instructions than with self-authored ones, but the increase over locked, generated instructions is not significant. These findings show that applying, articulating, and reviewing decision knowledge contribute differently to knowledge transfer. They provide a behavioral basis for designing and assessing human–AI systems around what people can demonstrate, explain, and evaluate.`
     }
   ],
 
   researchInProgress: [
-    {
-      title: "Teaching ‘I Know It When I See It’ to AI: Human–AI Collaboration for Transferring Tacit Decision Rules",
-      authors: "Maya Balakrishnan and Jordan Tong",
-      status: "Experiments complete; writing paper",
-      summary: `People often know how to make a good decision without being able to fully articulate the rule they use. In a controlled task, participants learn a hidden decision rule through practice and feedback, then teach an AI either by writing natural-language instructions or by labeling new examples. We study which channel better transfers tacit knowledge, whether people know which teaching method will work best, and what information is lost when expertise must be translated into words or demonstrations.`
-    },
     {
       title: "The Human in the Data Pipeline: Behavioral Biases in Training Data Set Curation for AI",
       authors: "Maya Balakrishnan and Jimin Nam",
@@ -88,7 +88,7 @@ window.SITE_DATA = {
     {
       title: "Consumer Choices and Learning under Differential Privacy",
       authors: "Maya Balakrishnan, Jimin Nam, D. Huang, and N. Ahmadi",
-      status: "Experiments conducted; analyzing data",
+      status: "Second experiment design in progress",
       summary: `Differential privacy creates a tradeoff between personalization and protection: stronger privacy can reduce the precision of information a service uses to match or recommend options. In a repeated-choice setting, we study how consumers choose among services with different privacy levels and match quality, how they learn about the consequences of those choices over time, and how perceived breach risk shapes demand for privacy.`
     }
   ],
@@ -147,7 +147,7 @@ window.SITE_DATA = {
     ["2026-09", "Serving as Track Chair for the POMS Teaching/Pedagogy in POM track for the 2027 conference."],
     ["2026-07", "Presented “The Human in the Data Pipeline: Behavioral Biases in Training Data Set Curation for AI” at the INFORMS M&SOM Conference in Boston."],
     ["2026-07", "Presented “Raising the Ceiling on What Students Can Learn with AI” in the Teaching Innovations Session at the INFORMS M&SOM Conference in Boston."],
-    ["2026-05", "Presented “Teaching ‘I Know It When I See It’ to AI: Human–AI Collaboration for Transferring Tacit Decision Rules” at the POMS Annual Conference in Reno."],
+    ["2026-05", "Presented “Capturing ‘I Know It When I See It’: Transferring Tacit Decision Knowledge to AI” at the POMS Annual Conference in Reno."],
     ["2026-05", "Presented “The Human in the Data Pipeline: Behavioral Biases in Training Data Set Curation for AI” at the Behavioral Operations Conference in Tempe."],
     ["2026-01", "Presented “Warnings and Endorsements: Improving Human–AI Collaboration in the Presence of Outliers” at the Workshop in Management Science in Santa Cruz, Chile."],
     ["2025-12", "Received the 2025 Management Science Distinguished Service Award (Reviewer)."],
