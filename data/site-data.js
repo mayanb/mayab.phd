@@ -12,7 +12,7 @@ window.SITE_DATA = {
     links: [
       {label: "CV", href: "assets/Maya_Balakrishnan_CV.pdf"},
       {label: "UT Dallas", href: "https://jindal.utdallas.edu/faculty/maya-balakrishnan?_ga=2.202056593.1689893000.1789410710-1668145572.1723650263"},
-      {label: "Google Scholar", href: "https://scholar.google.com/scholar?q=author%3A%22Maya%20Balakrishnan%22"}
+      {label: "Google Scholar", href: "https://scholar.google.com/citations?user=59qsHmUAAAAJ&hl=en"}
     ]
   },
 
